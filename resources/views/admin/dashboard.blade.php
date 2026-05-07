@@ -31,7 +31,7 @@
         <div class="form-group"><label class="form-label">Years of Experience</label><input class="form-input" id="aboutYears" type="number" value="12"/></div>
         </div>
         <div class="form-group"><label class="form-label">Title (HTML supported)</label><input class="form-input" id="aboutTitle" value="We Don't Just Take Photos, We Craft Moments"/></div>
-        <div class="form-group"><label class="form-label">Description Paragraph 1</label><textarea class="form-textarea" id="aboutDesc1">At Lumière & Love, we believe every wedding is a unique universe of emotion.</textarea></div>
+        <div class="form-group"><label class="form-label">Description Paragraph 1</label><textarea class="form-textarea" id="aboutDesc1">At Chitraloy - চিত্রালয়, we believe every wedding is a unique universe of emotion.</textarea></div>
         <div class="form-group"><label class="form-label">Description Paragraph 2</label><textarea class="form-textarea" id="aboutDesc2">Based in New York, we travel worldwide for couples who deserve nothing less than extraordinary.</textarea></div>
         <div class="form-row">
         <div class="form-group"><label class="form-label">Stat 1 Value</label><input class="form-input" id="aboutStat1Val" value="850+"/></div>
@@ -130,8 +130,8 @@
     <form id="settingsForm">
         <div id="tab-general">
         <div class="form-row">
-            <div class="form-group"><label class="form-label">Site Name</label><input class="form-input" id="siteName" value="Lumière & Love"/></div>
-            <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="siteEmail" value="hello@lumiereandlove.com"/></div>
+            <div class="form-group"><label class="form-label">Site Name</label><input class="form-input" id="siteName" value="Chitraloy - চিত্রালয়"/></div>
+            <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="siteEmail" value="hello@chittraloy.com"/></div>
         </div>
         <div class="form-group"><label class="form-label">CTA Tag</label><input class="form-input" id="ctaTag" value="Let's Begin"/></div>
         <div class="form-group"><label class="form-label">CTA Title</label><input class="form-input" id="ctaTitle" value="Your Story Deserves to be Remembered"/></div>
@@ -146,7 +146,7 @@
         <div id="tab-footer" style="display:none">
         <div class="form-group"><label class="form-label">Footer Tagline</label><input class="form-input" id="footerTagline" value="Luxury wedding photography for couples who believe their story is worth telling beautifully."/></div>
         <div class="form-group"><label class="form-label">Locations</label><input class="form-input" id="footerLocations" value="New York · Paris · Amalfi · Worldwide"/></div>
-        <div class="form-group"><label class="form-label">Copyright Text</label><input class="form-input" id="footerCopy" value="© 2025 Lumière & Love Photography. All rights reserved."/></div>
+        <div class="form-group"><label class="form-label">Copyright Text</label><input class="form-input" id="footerCopy" value="© 2025 Chitraloy - চিত্রালয় Photography. All rights reserved."/></div>
         </div>
         <button type="submit" class="btn-gold" style="margin-top:10px"><i class="fas fa-save"></i> Save Settings</button>
     </form>
@@ -166,7 +166,8 @@
         <div class="form-group"><label class="form-label">Tag Line</label><input class="form-input" id="heroTag" placeholder="Award Winning Photography" required/></div>
         <div class="form-group"><label class="form-label">Title (use | for line break)</label><input class="form-input" id="heroTitleInput" placeholder="Where Love | Becomes Art" required/></div>
         <div class="form-group"><label class="form-label">Subtitle</label><input class="form-input" id="heroSubtitle" placeholder="Timeless moments · Genuine emotion"/></div>
-        <div class="form-group"><label class="form-label">Background Image URL</label><input class="form-input" id="heroBgUrl" placeholder="https://images.unsplash.com/..." required/></div>
+        <div class="form-group"><label class="form-label">Background Image</label><input type="file" class="form-input" id="heroBgFile" accept="image/*"/></div>
+        <input type="hidden" id="heroBgUrl"/>
         <div class="form-group"><label class="form-label">Button 1 Text</label><input class="form-input" id="heroBtn1" value="Discover More"/></div>
         <div class="form-group"><label class="form-label">Button 2 Text</label><input class="form-input" id="heroBtn2" value="Book Session"/></div>
       </form>

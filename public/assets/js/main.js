@@ -27,10 +27,7 @@
   document.getElementById('lightbox').addEventListener('click', e => { if(e.target===e.currentTarget) closeLightbox(); });
   document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
 
-  /* Video modal */
-  const vm = document.getElementById('videoModal');
-  vm.addEventListener('show.bs.modal', () => { document.getElementById('videoFrame').src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'; });
-  vm.addEventListener('hide.bs.modal', () => { document.getElementById('videoFrame').src=''; });
+
 
   /* Hero carousel animation reset */
   document.getElementById('heroCarousel').addEventListener('slide.bs.carousel', () => {
@@ -45,3 +42,44 @@
     const d = tx - e.changedTouches[0].screenX;
     if (Math.abs(d)>45) { const c=bootstrap.Carousel.getInstance(hc); d>0?c.next():c.prev(); }
   }, {passive:true});
+
+  /* Booking Form Submit */
+  const bookingForm = document.getElementById('bookingForm');
+  if(bookingForm) {
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('bookingSubmitBtn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+      btn.disabled = true;
+
+      const formData = new FormData(bookingForm);
+      const data = Object.fromEntries(formData.entries());
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+
+      try {
+        const response = await fetch('/api/inquiries', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          bookingForm.style.display = 'none';
+          document.getElementById('bookingSuccess').style.display = 'block';
+        } else {
+          alert('Sorry, there was an error submitting your inquiry. Please try again.');
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }
+      } catch (error) {
+        console.error('Error submitting inquiry:', error);
+        alert('Sorry, there was an error submitting your inquiry. Please try again.');
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    });
+  }

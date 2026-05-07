@@ -163,7 +163,7 @@
           <div class="pkg-badge">{{ $pkg->badge }}</div>
           @endif
           <span class="pkg-name">{{ $pkg->name }}</span>
-          <div class="pkg-price" {!! $pkg->featured ? 'style="color:var(--gold-light)"' : '' !!}><sup>$</sup>{{ number_format($pkg->price) }}</div>
+          <div class="pkg-price" {!! $pkg->featured ? 'style="color:var(--gold-light)"' : '' !!}><sup>৳</sup>{{ number_format($pkg->price) }}</div>
           <ul class="pkg-feature-list">
             @foreach(explode("\n", $pkg->features) as $feature)
                 @if(trim($feature))

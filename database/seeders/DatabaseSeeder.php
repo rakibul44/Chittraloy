@@ -58,8 +58,8 @@ class DatabaseSeeder extends Seeder
 
         // Default Site Settings
         DB::table('settings')->insert([
-            ['key' => 'siteName', 'value' => 'Lumière & Love'],
-            ['key' => 'siteEmail', 'value' => 'hello@lumiereandlove.com'],
+            ['key' => 'siteName', 'value' => 'Chitraloy - চিত্রালয়'],
+            ['key' => 'siteEmail', 'value' => 'hello@chittraloy.com'],
             ['key' => 'ctaTag', 'value' => 'Let\'s Begin'],
             ['key' => 'ctaTitle', 'value' => 'Your Story Deserves to be Remembered'],
             ['key' => 'ctaSub', 'value' => 'Limited dates available for 2025. Secure yours today.'],
@@ -69,12 +69,12 @@ class DatabaseSeeder extends Seeder
             ['key' => 'socialYt', 'value' => ''],
             ['key' => 'footerTagline', 'value' => 'Luxury wedding photography for couples who believe their story is worth telling beautifully.'],
             ['key' => 'footerLocations', 'value' => 'New York · Paris · Amalfi · Worldwide'],
-            ['key' => 'footerCopy', 'value' => '© 2025 Lumière & Love Photography. All rights reserved.'],
+            ['key' => 'footerCopy', 'value' => '© 2025 Chitraloy - চিত্রালয় Photography. All rights reserved.'],
             // About Section Data
             ['key' => 'aboutTag', 'value' => 'Our Story'],
             ['key' => 'aboutYears', 'value' => '12'],
             ['key' => 'aboutTitle', 'value' => 'We Don\'t Just Take Photos,<br>We <em>Craft</em> Moments'],
-            ['key' => 'aboutDesc1', 'value' => 'At Lumière & Love, we believe every wedding is a unique universe of emotion. We immerse ourselves in your story — the stolen glances, the happy tears, the quiet moments between — and transform them into photographs you\'ll treasure for generations.'],
+            ['key' => 'aboutDesc1', 'value' => 'At Chitraloy - চিত্রালয়, we believe every wedding is a unique universe of emotion. We immerse ourselves in your story — the stolen glances, the happy tears, the quiet moments between — and transform them into photographs you\'ll treasure for generations.'],
             ['key' => 'aboutDesc2', 'value' => 'Based in New York, we travel worldwide for couples who deserve nothing less than extraordinary.'],
             ['key' => 'aboutStat1Val', 'value' => '850+'],
             ['key' => 'aboutStat1Lbl', 'value' => 'Weddings Captured'],

@@ -130,14 +130,20 @@ function updateLightbox() {
   img.src = p.img;
   img.alt = p.title;
   img.onload = () => { img.style.transition='opacity .3s'; img.style.opacity='1'; };
-  document.getElementById('lightboxTag').textContent     = p.tag;
-  document.getElementById('lightboxTitle').textContent   = p.title;
-  document.getElementById('lightboxCounter').textContent = `${currentLBIdx + 1} / ${currentPhotos.length}`;
+  const tagEl = document.getElementById('lightboxTag');
+  if (tagEl) tagEl.textContent = p.tag;
+  const titleEl = document.getElementById('lightboxTitle');
+  if (titleEl) titleEl.textContent = p.title;
+  const counterEl = document.getElementById('lightboxCounter');
+  if (counterEl) counterEl.textContent = `${currentLBIdx + 1} / ${currentPhotos.length}`;
 }
 
-document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-document.getElementById('lightboxPrev').addEventListener('click', prevPhoto);
-document.getElementById('lightboxNext').addEventListener('click', nextPhoto);
+const lbClose = document.getElementById('lightboxClose');
+if (lbClose) lbClose.addEventListener('click', closeLightbox);
+const lbPrev = document.getElementById('lightboxPrev');
+if (lbPrev) lbPrev.addEventListener('click', prevPhoto);
+const lbNext = document.getElementById('lightboxNext');
+if (lbNext) lbNext.addEventListener('click', nextPhoto);
 
 document.addEventListener('keydown', e => {
   if (!document.getElementById('lightbox').classList.contains('open')) return;
@@ -163,36 +169,12 @@ lb.addEventListener('touchend', e => {
   }
 }, {passive:true});
 
-/* ────────────── MOBILE NAV ──────────────────────────── */
-const hamburger = document.getElementById('hamburger');
-const drawer    = document.getElementById('mobileDrawer');
-hamburger.addEventListener('click', () => {
-  const isOpen = hamburger.classList.toggle('open');
-  drawer.classList.toggle('open', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-});
-drawer.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    drawer.classList.remove('open');
-    hamburger.setAttribute('aria-expanded','false');
-    document.body.style.overflow = '';
-  });
-});
-document.addEventListener('click', e => {
-  if (hamburger.classList.contains('open') &&
-      !drawer.contains(e.target) && !hamburger.contains(e.target)) {
-    hamburger.classList.remove('open');
-    drawer.classList.remove('open');
-    hamburger.setAttribute('aria-expanded','false');
-    document.body.style.overflow = '';
-  }
-});
+
 
 /* ────────────── NAVBAR SCROLL ───────────────────────── */
 window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  const nav = document.getElementById('mainNav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
 }, {passive:true});
 
 /* ────────────── SCROLL REVEAL ───────────────────────── */

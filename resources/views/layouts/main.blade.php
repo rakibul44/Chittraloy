@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="csrf-token" content="{{ csrf_token() }}"/>
   <title>@yield('title', isset($settings) ? $settings->get('siteName', 'Chittraloy – Wedding Photography') : 'Chittraloy – Wedding Photography')</title>
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
@@ -78,7 +80,7 @@
           <button class="btn-nav-booking" style="padding:.58rem .9rem;white-space:nowrap;flex-shrink:0;font-size:.68rem">Subscribe</button>
         </div>
         <p style="font-size:.7rem;margin-top:.9rem;color:rgba(250,246,240,.26)"><i class="bi bi-geo-alt me-1" style="color:var(--gold)"></i> {{ isset($settings) ? $settings->get('footerLocations') : 'New York · Paris · Amalfi · Worldwide' }}</p>
-        <p style="font-size:.7rem;margin-top:.38rem;color:rgba(250,246,240,.26)"><i class="bi bi-envelope me-1" style="color:var(--gold)"></i> {{ isset($settings) ? $settings->get('siteEmail') : 'hello@lumiereandlove.com' }}</p>
+        <p style="font-size:.7rem;margin-top:.38rem;color:rgba(250,246,240,.26)"><i class="bi bi-envelope me-1" style="color:var(--gold)"></i> {{ isset($settings) ? $settings->get('siteEmail') : 'hello@chittraloy.com' }}</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -105,6 +107,12 @@
       </div>
       <div class="modal-body p-0">
         <div class="video-modal-inner">
+          <script>
+            const vm = document.getElementById('videoModal');
+            const videoUrl = '{{ isset($settings) ? $settings->get("videoUrl", "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1") : "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }}';
+            vm.addEventListener('show.bs.modal', () => { document.getElementById('videoFrame').src=videoUrl; });
+            vm.addEventListener('hide.bs.modal', () => { document.getElementById('videoFrame').src=''; });
+          </script>
           <iframe id="videoFrame" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
         </div>
       </div>
@@ -122,25 +130,38 @@
       </div>
       <div class="modal-body">
         <p style="font-size:.78rem;color:var(--warm-gray);margin-bottom:1.4rem;letter-spacing:.04em">Fill in the form below and we'll get back to you within 24 hours.</p>
+        <form id="bookingForm">
         <div class="row g-3">
-          <div class="col-12 col-sm-6"><label class="form-label">Your Name</label><input type="text" class="form-control" placeholder="First & Last Name"/></div>
-          <div class="col-12 col-sm-6"><label class="form-label">Partner's Name</label><input type="text" class="form-control" placeholder="First & Last Name"/></div>
-          <div class="col-12 col-sm-6"><label class="form-label">Email Address</label><input type="email" class="form-control" placeholder="hello@example.com"/></div>
-          <div class="col-12 col-sm-6"><label class="form-label">Phone Number</label><input type="tel" class="form-control" placeholder="+1 (555) 000-0000"/></div>
-          <div class="col-12 col-sm-6"><label class="form-label">Wedding Date</label><input type="date" class="form-control"/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Your Name</label><input type="text" class="form-control" name="name" id="bookingName" placeholder="First & Last Name" required/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Partner's Name</label><input type="text" class="form-control" name="partner" id="bookingPartner" placeholder="First & Last Name"/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Email Address</label><input type="email" class="form-control" name="email" id="bookingEmail" placeholder="hello@example.com" required/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Phone Number</label><input type="tel" class="form-control" name="phone" id="bookingPhone" placeholder="+1 (555) 000-0000"/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Wedding Date</label><input type="date" class="form-control" name="date" id="bookingDate"/></div>
           <div class="col-12 col-sm-6">
             <label class="form-label">Package Interest</label>
-            <select class="form-select">
+            <select class="form-select" name="package" id="bookingPackage">
               <option value="">Select a package</option>
-              <option>Essence – $1,800</option>
-              <option>Lumière – $3,200</option>
-              <option>Forever – $5,500</option>
+              @if(isset($packages))
+                @foreach($packages as $pkg)
+                  <option>{{ $pkg->name }} – ৳{{ number_format($pkg->price) }}</option>
+                @endforeach
+              @else
+                <option>Essence – ৳1,800</option>
+                <option>Lumière – ৳3,200</option>
+                <option>Forever – ৳5,500</option>
+              @endif
               <option>Custom / Not sure yet</option>
             </select>
           </div>
-          <div class="col-12"><label class="form-label">Venue / Location</label><input type="text" class="form-control" placeholder="City, Country or Venue Name"/></div>
-          <div class="col-12"><label class="form-label">Tell Us About Your Day</label><textarea class="form-control" rows="3" placeholder="Share details about your wedding vision..."></textarea></div>
-          <div class="col-12"><button class="btn-submit">Send Inquiry <i class="bi bi-arrow-right ms-2"></i></button></div>
+          <div class="col-12"><label class="form-label">Venue / Location</label><input type="text" class="form-control" name="venue" id="bookingVenue" placeholder="City, Country or Venue Name"/></div>
+          <div class="col-12"><label class="form-label">Tell Us About Your Day</label><textarea class="form-control" rows="3" name="message" id="bookingMessage" placeholder="Share details about your wedding vision..."></textarea></div>
+          <div class="col-12"><button type="submit" class="btn-submit" id="bookingSubmitBtn">Send Inquiry <i class="bi bi-arrow-right ms-2"></i></button></div>
+        </div>
+        </form>
+        <div id="bookingSuccess" style="display:none;text-align:center;padding:2rem 0;">
+          <i class="bi bi-check-circle" style="font-size:3rem;color:var(--gold);display:block;margin-bottom:1rem;"></i>
+          <h5 style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.5rem;">Thank You!</h5>
+          <p style="font-size:.82rem;color:var(--warm-gray);">Your inquiry has been submitted. We'll get back to you within 24 hours.</p>
         </div>
       </div>
     </div>

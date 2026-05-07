@@ -166,7 +166,7 @@ function renderPackages(){
   LS('packages').forEach(p=>{
     const fc = (p.features||'').split('\n').filter(f=>f.trim()).length;
     tbody.innerHTML += `<tr>
-      <td>${p.name}</td><td>$${Number(p.price).toLocaleString()}</td>
+      <td>${p.name}</td><td>৳${Number(p.price).toLocaleString()}</td>
       <td>${p.featured?'<span class="status status-active">Yes</span>':'<span class="status status-inactive">No</span>'}</td>
       <td>${fc} features</td>
       <td><div class="table-actions"><button onclick="editPackage(${p.id})" title="Edit"><i class="fas fa-pen"></i></button><button class="delete" onclick="deleteItem('packages',${p.id})" title="Delete"><i class="fas fa-trash"></i></button></div></td></tr>`;

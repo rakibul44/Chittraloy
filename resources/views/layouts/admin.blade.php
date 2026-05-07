@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="csrf-token" content="{{ csrf_token() }}"/>
   <title>@yield('title', 'Chittraloy — Admin Dashboard')</title>
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="{{ asset('admin_assets/css/admin.css') }}"/>
@@ -38,7 +40,7 @@
       </div>
       <div class="nav-group">
         <span class="nav-group-label">Data</span>
-        <button class="nav-item" data-section="inquiries"><i class="fas fa-envelope-open-text"></i> Inquiries <span class="badge" id="inquiryBadge">3</span></button>
+        <button class="nav-item" data-section="inquiries"><i class="fas fa-envelope-open-text"></i> Inquiries <span class="badge" id="inquiryBadge">0</span></button>
         <button class="nav-item" data-section="contacts"><i class="fas fa-address-book"></i> Contacts</button>
       </div>
       <div class="nav-group">
@@ -50,10 +52,16 @@
       <div class="sidebar-user">
         <div class="sidebar-avatar"><i class="fas fa-user"></i></div>
         <div class="sidebar-user-info">
-          <div class="sidebar-user-name" id="adminName">Admin User</div>
+          <div class="sidebar-user-name" id="adminName">{{ Auth::user()->name ?? 'Admin' }}</div>
           <div class="sidebar-user-role">Administrator</div>
         </div>
       </div>
+      <form method="POST" action="{{ route('logout') }}" style="margin-top:.6rem;">
+        @csrf
+        <button type="submit" style="width:100%;padding:.5rem .8rem;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:6px;color:#fca5a5;font-family:inherit;font-size:.72rem;cursor:pointer;letter-spacing:.06em;transition:background .2s;">
+          <i class="fas fa-sign-out-alt" style="margin-right:.4rem;"></i> Sign Out
+        </button>
+      </form>
     </div>
   </aside>
 
@@ -67,7 +75,7 @@
       <div class="header-right">
         <div class="header-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..." id="globalSearch"/></div>
         <button class="header-btn" title="Notifications"><i class="fas fa-bell"></i><span class="dot"></span></button>
-        <a href="{{ url('/') }}" class="header-btn" title="View Site"><i class="fas fa-external-link-alt"></i></a>
+        <a href="{{ url('/') }}" class="header-btn" title="View Site" target="_blank"><i class="fas fa-external-link-alt"></i></a>
       </div>
     </header>
 
