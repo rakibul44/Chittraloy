@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="csrf-token" content="34zLLeqFZSDR3FekDJEJ91JqZCbsUNgGdDDiTMHp"/>
+  <title>Chitraloy - চিত্রালয়</title>
+  <link rel="icon" type="image/png" href="https://rakibul44.github.io/Chittraloy/assets/images/logo.png"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://rakibul44.github.io/Chittraloy/assets/css/style.css">
+  </head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="navbar navbar-expand-lg" id="mainNav">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand" href="./index.html"><img src="https://rakibul44.github.io/Chittraloy/assets/images/logo.png" alt="Chittraloy" class="brand-logo"/></a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-0 gap-lg-1 mt-1 mt-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="#video">Film</a></li>
+      </ul>
+      <div class="navbar-nav-btns">
+        <button class="btn-nav-booking" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="home" style="padding:0;">
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5500">
+  <div class="carousel-indicators">
+      </div>
+  <div class="carousel-inner">
+      </div>
+    <div class="scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
+</div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center g-4 g-xl-5">
+      <div class="col-12 col-lg-6 reveal">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=900&amp;q=80" alt="About" class="about-img-main"/>
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&amp;q=80" alt="Detail" class="about-img-accent"/>
+          <div class="about-badge"><strong>12</strong><span>Years of Love</span></div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 reveal" style="transition-delay:.2s">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">We Don't Just Take Photos,<br>We <em>Craft</em> Moments</h2>
+        <div class="section-line"></div>
+        <p class="section-body mb-3">At Chitraloy - চিত্রালয়, we believe every wedding is a unique universe of emotion. We immerse ourselves in your story — the stolen glances, the happy tears, the quiet moments between — and transform them into photographs you&#039;ll treasure for generations.</p>
+        <p class="section-body mb-3">Based in New York, we travel worldwide for couples who deserve nothing less than extraordinary.</p>
+        <div class="about-stats mb-4">
+          <div class="about-stat"><strong>900+</strong><small>Weddings Captured</small></div>
+          <div class="about-stat"><strong>42+</strong><small>Countries Visited</small></div>
+          <div class="about-stat"><strong>98%</strong><small>Happy Couples</small></div>
+        </div>
+        <a href="#packages" class="btn-hero" style="border-color:var(--gold);color:var(--gold)">Explore Packages</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects">
+  <div class="container mb-4 mb-lg-5">
+    <div class="row g-3">
+      <div class="col-12 col-lg-6 reveal">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title" style="color:var(--cream)">Stories We've<br><em>Had the Honor</em> to Tell</h2>
+      </div>
+      <div class="col-12 col-lg-6 d-flex align-items-end reveal" style="transition-delay:.2s">
+        <p class="section-body">A curated selection of our most beloved weddings — each one a world unto itself.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid px-2 px-md-3">
+    <div class="row g-2">
+            <div class="col-12 col-md-6 reveal">
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=900&amp;q=80" alt="Sofia &amp; Marcus" class="project-img project-img-lg"/>
+          <div class="project-overlay"><div class="project-info"><h5>Sofia &amp; Marcus</h5><small>Amalfi Coast, Italy · Summer 2024</small></div></div>
+        </div>
+      </div>
+            <div class="col-12 col-md-6 reveal" style="transition-delay:.15s">
+        <div class="row g-2">
+                    <div class="col-12">
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=900&amp;q=80" alt="Amara &amp; James" class="project-img project-img-sm"/>
+              <div class="project-overlay"><div class="project-info"><h5>Amara &amp; James</h5><small>Santorini, Greece · Spring 2024</small></div></div>
+            </div>
+          </div>
+                              <div class="col-12">
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=900&amp;q=80" alt="Chloe &amp; Rafael" class="project-img project-img-sm"/>
+              <div class="project-overlay"><div class="project-info"><h5>Chloe &amp; Rafael</h5><small>Tuscany, Italy · Autumn 2023</small></div></div>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section id="gallery">
+  <div class="container mb-4 text-center">
+    <div class="reveal">
+      <span class="section-tag">Gallery</span>
+      <h2 class="section-title">A Glimpse Into <em>Our World</em></h2>
+    </div>
+  </div>
+  <div class="container reveal">
+    <div class="gallery-grid" id="homeGalleryGrid">
+            <div class="gallery-item" onclick="openLightbox(this)" style="cursor: pointer;">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&amp;q=80" alt="Gallery 1" loading="lazy"/>
+        <div class="gallery-hover"><i class="bi bi-zoom-in"></i></div>
+      </div>
+            <div class="gallery-item" onclick="openLightbox(this)" style="cursor: pointer;">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&amp;q=80" alt="Gallery 2" loading="lazy"/>
+        <div class="gallery-hover"><i class="bi bi-zoom-in"></i></div>
+      </div>
+            <div class="gallery-item" onclick="openLightbox(this)" style="cursor: pointer;">
+        <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&amp;q=80" alt="Gallery 3" loading="lazy"/>
+        <div class="gallery-hover"><i class="bi bi-zoom-in"></i></div>
+      </div>
+            <div class="gallery-item" onclick="openLightbox(this)" style="cursor: pointer;">
+        <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=900&amp;q=80" alt="Gallery 4" loading="lazy"/>
+        <div class="gallery-hover"><i class="bi bi-zoom-in"></i></div>
+      </div>
+            <div class="gallery-item" onclick="openLightbox(this)" style="cursor: pointer;">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&amp;q=80" alt="Gallery 5" loading="lazy"/>
+        <div class="gallery-hover"><i class="bi bi-zoom-in"></i></div>
+      </div>
+            <div class="gallery-item" onclick="openLightbox(this)" style="cursor: pointer;">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=900&amp;q=80" alt="Gallery 6" loading="lazy"/>
+        <div class="gallery-hover"><i class="bi bi-zoom-in"></i></div>
+      </div>
+          </div>
+    <div class="text-center mt-4">
+      <a href="./gallery.html" class="btn-hero" style="border-color:var(--gold);color:var(--gold)">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VIDEO ══ -->
+<section id="video" style="padding:0;">
+  <div class="video-wrap">
+    <img src="https://images.unsplash.com/photo-1561486462-89834a03cb72?w=1800&amp;q=80" alt="Video Cover" class="video-bg"/>
+    <div class="video-overlay">
+      <div class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal"><i class="bi bi-play-fill text-white"></i></div>
+      <h2 class="video-title">Feel the Story</h2>
+      <p class="video-sub">Watch our cinematic wedding films</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PACKAGES ══ -->
+<section id="packages">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Investment</span>
+      <h2 class="section-title">Packages Crafted with <em>Love</em></h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-9 col-md-6 col-lg-4 reveal" style="transition-delay: 0s">
+        <div class="pkg-card ">
+                    <span class="pkg-name">Essence</span>
+          <div class="pkg-price" ><sup>৳</sup>1,800</div>
+          <ul class="pkg-feature-list">
+                                                                        <li class="pkg-feature-item"><i class="bi bi-check2" ></i> 6 Hours Coverage</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> 1 Photographer</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> 300+ Edited Photos</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Online Gallery</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> USB Delivery</li>
+                                                                                                            <li class="pkg-feature-item" style="opacity:.38"><i class="bi bi-x"></i> Engagement Session</li>
+                                                                                                            <li class="pkg-feature-item" style="opacity:.38"><i class="bi bi-x"></i> Wedding Film</li>
+                                                          </ul>
+          <button class="btn-pkg" data-bs-toggle="modal" data-bs-target="#bookingModal">Book This Package</button>
+        </div>
+      </div>
+            <div class="col-12 col-sm-9 col-md-6 col-lg-4 reveal" style="transition-delay: 0.15s">
+        <div class="pkg-card featured">
+                    <div class="pkg-badge">Most Popular</div>
+                    <span class="pkg-name">Lumière</span>
+          <div class="pkg-price" style="color:var(--gold-light)"><sup>৳</sup>3,200</div>
+          <ul class="pkg-feature-list">
+                                                                        <li class="pkg-feature-item"><i class="bi bi-check2" style="color:var(--gold)"></i> Full Day (10 hrs)</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" style="color:var(--gold)"></i> 2 Photographers</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" style="color:var(--gold)"></i> 600+ Edited Photos</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" style="color:var(--gold)"></i> Private Gallery</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" style="color:var(--gold)"></i> Fine Art Album</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" style="color:var(--gold)"></i> Engagement Session</li>
+                                                                                                            <li class="pkg-feature-item" style="opacity:.38"><i class="bi bi-x"></i> Wedding Film</li>
+                                                          </ul>
+          <button class="btn-pkg" data-bs-toggle="modal" data-bs-target="#bookingModal">Book This Package</button>
+        </div>
+      </div>
+            <div class="col-12 col-sm-9 col-md-6 col-lg-4 reveal" style="transition-delay: 0.3s">
+        <div class="pkg-card ">
+                    <span class="pkg-name">Forever</span>
+          <div class="pkg-price" ><sup>৳</sup>5,500</div>
+          <ul class="pkg-feature-list">
+                                                                        <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Full Day + Rehearsal</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> 2 Photographers + Videographer</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Unlimited Edited Photos</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Private Gallery</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Luxury Heirloom Album</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Engagement Session</li>
+                                                                                                            <li class="pkg-feature-item"><i class="bi bi-check2" ></i> Cinematic Wedding Film</li>
+                                                          </ul>
+          <button class="btn-pkg" data-bs-toggle="modal" data-bs-target="#bookingModal">Book This Package</button>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Kind Words</span>
+      <h2 class="section-title">What Our Couples <em>Say</em></h2>
+    </div>
+    <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4 reveal" style="transition-delay: 0s">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"They captured moments we didn&#039;t even know were happening. Every photo made us cry happy tears. Worth every penny and more."</p>
+          <span class="testi-author"><strong>Sofia &amp; Marcus</strong> · Amalfi Coast 2024</span>
+        </div>
+      </div>
+            <div class="col-12 col-md-6 col-lg-4 reveal" style="transition-delay: 0.15s">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"From first consultation to delivery, the experience was flawless. The photos look like scenes from a movie. We are in love with every frame."</p>
+          <span class="testi-author"><strong>Amara &amp; James</strong> · Santorini 2024</span>
+        </div>
+      </div>
+            <div class="col-12 col-md-6 col-lg-4 reveal" style="transition-delay: 0.3s">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-quote">"The most talented photographers we&#039;ve encountered. They made us feel at ease and the results are absolutely breathtaking."</p>
+          <span class="testi-author"><strong>Chloe &amp; Rafael</strong> · Tuscany 2023</span>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section id="cta">
+  <div class="inner py-5">
+    <div class="container text-center py-4 py-lg-5">
+      <span class="section-tag" style="color:var(--gold-light)">Let&#039;s Begin</span>
+      <h2 class="section-title" style="color:#fff;margin-bottom:1rem">Your Story Deserves to be Remembered</h2>
+      <p style="color:rgba(255,255,255,.6);font-size:clamp(.78rem,1.4vw,.86rem);letter-spacing:.08em;margin-bottom:2rem;font-weight:300">Limited dates available for 2025. Secure yours today.</p>
+      <button class="btn-cta" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Your Date</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-12 col-lg-4">
+        <span class="footer-brand"><img src="https://rakibul44.github.io/Chittraloy/assets/images/logo.png" alt="Chittraloy" class="footer-logo"/></span>
+        <p style="font-size:.8rem;line-height:1.9;font-weight:300;max-width:270px;margin-bottom:1.3rem;color:rgba(250,246,240,.42)">Luxury wedding photography for couples who believe their story is worth telling beautifully.</p>
+        <div>
+                                                </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <p class="footer-title">Navigate</p>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#projects" class="footer-link">Work</a>
+        <a href="#gallery" class="footer-link">Gallery</a>
+        <a href="#packages" class="footer-link">Packages</a>
+        <a href="#video" class="footer-link">Films</a>
+      </div>
+      <div class="col-6 col-lg-2">
+        <p class="footer-title">Services</p>
+        <a href="#" class="footer-link">Wedding</a>
+        <a href="#" class="footer-link">Engagement</a>
+        <a href="#" class="footer-link">Elopement</a>
+        <a href="#" class="footer-link">Destination</a>
+        <a href="#" class="footer-link">Portraits</a>
+      </div>
+      <div class="col-12 col-lg-4">
+        <p class="footer-title">Stay in Touch</p>
+        <p style="font-size:.78rem;font-weight:300;margin-bottom:.9rem;color:rgba(250,246,240,.38)">Get inspiration & behind-the-scenes stories in your inbox.</p>
+        <div class="d-flex">
+          <input type="email" class="footer-input" placeholder="Your email address"/>
+          <button class="btn-nav-booking" style="padding:.58rem .9rem;white-space:nowrap;flex-shrink:0;font-size:.68rem">Subscribe</button>
+        </div>
+        <p style="font-size:.7rem;margin-top:.9rem;color:rgba(250,246,240,.26)"><i class="bi bi-geo-alt me-1" style="color:var(--gold)"></i> New York · Paris · Amalfi · Worldwide</p>
+        <p style="font-size:.7rem;margin-top:.38rem;color:rgba(250,246,240,.26)"><i class="bi bi-envelope me-1" style="color:var(--gold)"></i> hello@chittraloy.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <span>© 2025 Chitraloy - চিত্রালয় Photography. All rights reserved.</span>
+        <span>Privacy Policy · Terms of Service</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ LIGHTBOX ══ -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></span>
+  <img src="" id="lightboxImg" alt="Gallery"/>
+</div>
+
+<!-- ══ VIDEO MODAL ══ -->
+<div class="modal fade" id="videoModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0 py-2">
+        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="video-modal-inner">
+          <script>
+            const vm = document.getElementById('videoModal');
+            const videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+            vm.addEventListener('show.bs.modal', () => { document.getElementById('videoFrame').src=videoUrl; });
+            vm.addEventListener('hide.bs.modal', () => { document.getElementById('videoFrame').src=''; });
+          </script>
+          <iframe id="videoFrame" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BOOKING MODAL ══ -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reserve Your Date</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:.78rem;color:var(--warm-gray);margin-bottom:1.4rem;letter-spacing:.04em">Fill in the form below and we'll get back to you within 24 hours.</p>
+        <form id="bookingForm">
+        <div class="row g-3">
+          <div class="col-12 col-sm-6"><label class="form-label">Your Name</label><input type="text" class="form-control" name="name" id="bookingName" placeholder="First & Last Name" required/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Partner's Name</label><input type="text" class="form-control" name="partner" id="bookingPartner" placeholder="First & Last Name"/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Email Address</label><input type="email" class="form-control" name="email" id="bookingEmail" placeholder="hello@example.com" required/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Phone Number</label><input type="tel" class="form-control" name="phone" id="bookingPhone" placeholder="+1 (555) 000-0000"/></div>
+          <div class="col-12 col-sm-6"><label class="form-label">Wedding Date</label><input type="date" class="form-control" name="date" id="bookingDate"/></div>
+          <div class="col-12 col-sm-6">
+            <label class="form-label">Package Interest</label>
+            <select class="form-select" name="package" id="bookingPackage">
+              <option value="">Select a package</option>
+                                                <option>Essence – ৳1,800</option>
+                                  <option>Lumière – ৳3,200</option>
+                                  <option>Forever – ৳5,500</option>
+                                            <option>Custom / Not sure yet</option>
+            </select>
+          </div>
+          <div class="col-12"><label class="form-label">Venue / Location</label><input type="text" class="form-control" name="venue" id="bookingVenue" placeholder="City, Country or Venue Name"/></div>
+          <div class="col-12"><label class="form-label">Tell Us About Your Day</label><textarea class="form-control" rows="3" name="message" id="bookingMessage" placeholder="Share details about your wedding vision..."></textarea></div>
+          <div class="col-12"><button type="submit" class="btn-submit" id="bookingSubmitBtn">Send Inquiry <i class="bi bi-arrow-right ms-2"></i></button></div>
+        </div>
+        </form>
+        <div id="bookingSuccess" style="display:none;text-align:center;padding:2rem 0;">
+          <i class="bi bi-check-circle" style="font-size:3rem;color:var(--gold);display:block;margin-bottom:1rem;"></i>
+          <h5 style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.5rem;">Thank You!</h5>
+          <p style="font-size:.82rem;color:var(--warm-gray);">Your inquiry has been submitted. We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SIGN IN MODAL ══ -->
+<div class="modal fade" id="signinModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:min(430px,95vw)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Client Login</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:.78rem;color:var(--warm-gray);margin-bottom:1.4rem">Access your private gallery and wedding materials.</p>
+        <div class="row g-3">
+          <div class="col-12"><label class="form-label">Email Address</label><input type="email" class="form-control" placeholder="hello@example.com"/></div>
+          <div class="col-12"><label class="form-label">Password</label><input type="password" class="form-control" placeholder="••••••••"/></div>
+          <div class="col-12"><button class="btn-submit">Sign In <i class="bi bi-arrow-right ms-2"></i></button></div>
+          <div class="col-12 text-center"><a href="#" style="font-size:.7rem;color:var(--warm-gray);text-decoration:none">Forgot your password?</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://rakibul44.github.io/Chittraloy/assets/js/main.js"></script>
+</body>
+</html>
