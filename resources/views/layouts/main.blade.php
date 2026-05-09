@@ -33,7 +33,6 @@
         <li class="nav-item"><a class="nav-link" href="{{ url('/#video') }}">Film</a></li>
       </ul>
       <div class="navbar-nav-btns">
-        <button class="btn-nav-signin" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</button>
         <button class="btn-nav-booking" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
       </div>
     </div>
