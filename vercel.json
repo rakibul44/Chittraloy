@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build && node build-static.js",
+  "buildCommand": "npm run build && node build-static.cjs",
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
